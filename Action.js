@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const links = [
         '',
         '',
-        ''
+        'https://twilhem.github.io/Presentation/Chess/echecs.html'
     ];
 
     images.forEach((image, index) => {
