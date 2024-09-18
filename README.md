@@ -1,3 +1,3 @@
 ﻿# Presentation
-[Page Web]()
-[Page Chess]()
+[Page Web](https://twilhem.github.io/Presentation/Index.html)  
+[Page Chess](https://twilhem.github.io/Presentation/Chess/Chess.html)  
