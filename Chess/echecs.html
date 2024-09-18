@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Echecs</title>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" type="text/css" href="echecs.css"/>
+</head>
+<body>
+  <h1>Partie d'échecs</h1>
+  <div class="container">
+  <div class="left-column">
+    <div id="echiquier" class="echiquier"></div>
+    <div class="center">
+      <div class="boutons" id="Cp">
+        <div class="text-container">
+          <B>Choisit la transformation:</B>
+        </div>
+        <div class="button-container">
+          <button id="Tour"></button>
+          <button id="Cavalier"></button>
+          <button id="Fou"></button>
+          <button id="Reine"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="right-column">
+      Coup: <span id="coup">0</span>
+      <button id="prev" title="Coup précédent">&lt;</button>
+      <button id="next" title="Coup suivant">&gt;</button>
+      <p id="history"></p>
+    </div>
+  </div>
+  <script src="echecs.js"></script>
+</body>
+</html>
