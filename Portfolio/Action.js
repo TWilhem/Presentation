@@ -1,4 +1,4 @@
-let NameImage = ["Serveur.Webp", "Programmation.webp", "Langue.webp"]
+let NameImage = ["Serveur.webp", "Programmation.webp", "Langue.webp"]
 let NbImage = 0
 
 let ButtonPrev=document.getElementById("arrow L")
