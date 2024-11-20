@@ -58,3 +58,16 @@ function ChangeInfo (info) {
         console.log("Une id non trouvé")
     }
 }
+
+
+function ChargementImage(urls) {
+    urls.forEach(url => {
+        const img = new Image();
+        img.src = (`./image/${url}`);   
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    ChargementImage(NameImage);
+    console.log("La page est chargée !");
+  });
