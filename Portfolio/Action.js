@@ -45,7 +45,7 @@ function ChangeInfo (info) {
             ClassA.id = "InactiveD";
             ClassD.id = "InactiveG";
             ClassG.id = "Active";
-        } else if (info === 'url("./image/Serveur.Webp")') {
+        } else if (info === 'url("./image/Serveur.webp")') {
             ClassA.id = "Active";
             ClassD.id = "InactiveD";
             ClassG.id = "InactiveG";
