@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio de Wilhem Tom</title>
     <link rel="stylesheet" href="./format.css">
+    <script src="Action.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,7 +31,7 @@
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     </ul>
-                    <button onclick="window.location.href='../index.html'">Projet</button>
+                    <button onclick="window.location.href='../Presentation/index.html'">Projet</button>
                 </div>
                 <div class="image">
                     <img src="image/Photo.webp" alt="Photo de Wilhem Tom">
@@ -58,19 +59,58 @@
                     </div>
                 </div>
                 <div class="slide inactiveD" id="InactiveD">
-                    <div class="text">
+                    <div class="textA">
                         <h3>Programmation</h3>
-                        <ul>
-                            <ul>Apprentissage des codes:
-                                <li>HTML/CSS</li>
-                                <li>Python</li>
-                                <li>Assembleur</li>
-                                <li>Bash</li>
-                                <li>Javascript</li>
-                                <li>PHP</li>
-                                <li>C++ (Arduino)</li>
-                            </ul>
-                        </ul>
+                        <div class="skills-container">
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="orange" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="18.85"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">90%</text>
+                                </svg>
+                                <p>HTML/CSS</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="yellow" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="66.575"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">65%</text>
+                                </svg>
+                                <p>Javascript</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="violet" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="47.125"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">75%</text>
+                                </svg>
+                                <p>Python</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="grey" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="94.25"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">50%</text>
+                                </svg>
+                                <p>Bash</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#3498db" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="94.25"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">50%</text>
+                                </svg>
+                                <p>PHP</p>
+                            </div>
+                            <div class="skill-item">
+                                <svg width="75" height="75" class="skill-circle">
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="#e0e0e0" stroke-width="10"/>
+                                    <circle cx="40" cy="40" r="30" fill="none" stroke="Green" stroke-width="10" stroke-dasharray="188.5" stroke-dashoffset="113.1"/>
+                                    <text x="55%" y="55%" text-anchor="middle" dy=".3em" font-size="16">40%</text>
+                                </svg>
+                                <p>C++ (arduino)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="slide inactiveG" id="InactiveG">
@@ -89,16 +129,6 @@
     <section class="Competence">
         <div class="container">
             <div class="tableur">
-                <div class="Connaisance">
-                    <div class="text">
-                        <h3>Connaisance</h3>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
                 <div class="Diplome">
                     <div class="text">
                         <h3>Diplome</h3>
@@ -115,14 +145,13 @@
                         <ul>
                             <li>Jeu d'échec (Javascript)</li>
                             <li>Comptabilité (Python)</li>
-                            <li>Cours en ligne (Git avec ActionUser)</li>
+                            <li>Cours en ligne (Github avec ActionUser)</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <script src="./Action.js"></script>
 </body>
 
 

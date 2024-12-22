@@ -6,7 +6,7 @@ body, html {
     background-color: rgb(62, 61, 61);
 }
 
-p {
+header {
     color: white;
     font-weight: bold;
     text-align: center; 
@@ -15,10 +15,25 @@ p {
     font-size: 36px;
 }
 
-.image-container {
+p {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    font-size: 36px;
+    margin-bottom: 0px;
+}
+
+.image-container-SocialM {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.image-container-Completed, .image-container-NCompleted {
+    display: flex;
+    flex-wrap: wrap;
     padding: 10px;
     box-sizing: border-box;
     width: 100%;
@@ -30,17 +45,21 @@ p {
     margin-bottom: 10px;
     aspect-ratio: 1 / 1;
     overflow: hidden;
-}
-
-.image-wrapper:last-child {
-    width: 100%;
+    width: calc(20% - 5px);
+    height: calc(20% - 5px);
+    margin: 10px;
 }
 
 .rounded-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
+    object-position: center;
+}
+
+.rounded-imageSocial {
+    width: 100%;
+    height: 100%;
 }
 
 .overlay {
@@ -66,10 +85,5 @@ p {
 
 @media (min-width: 768px) {
     .image-wrapper {
-        width: calc(33.33% - 10px);
-    }
-    
-    .image-wrapper:last-child {
-        width: calc(33.33% - 10px);
     }
 }
