@@ -1,77 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Presentation</title>
-    <link rel="stylesheet" href="./Presentation/effect.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Projets</title>
+  <meta name="description" content="Présentation de projets finis et en cours — responsive pour mobile et PC" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <link rel="icon" href="./Presentation/image/favicon.ico?v=1">
-    <link rel="apple-touch-icon" href="./Presentation/image/favicon.ico?v=1">
-
-    <script src="Presentation/Action.js"></script>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#4f46e5; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --gap:18px; --maxw:1200px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,#071026 0%, #041022 100%); color:#e6eef6; -webkit-font-smoothing:antialiased;
+      padding:32px; display:flex; justify-content:center; align-items:flex-start;
+    }
+    .container{width:100%; max-width:var(--maxw)}
+    header{
+      display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:22px;
+    }
+    .logo{display:flex; gap:12px; align-items:center}
+    .logo .hex{width:48px;height:48px;background:linear-gradient(135deg,var(--accent),#06b6d4); border-radius:10px; display:grid;place-items:center;font-weight:700}
+    h1{font-size:20px;margin:0}
+    p.lead{margin:0;color:var(--muted)}
+    .controls{display:flex;gap:12px;align-items:center}
+    .search{padding:8px 12px;border-radius:10px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);min-width:180px}
+    .toggle{display:flex;gap:8px;background:transparent}
+    .btn{padding:8px 12px;border-radius:10px;background:linear-gradient(90deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);cursor:pointer}
+    .grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:var(--gap)}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02)); border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,0.03); box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+      display:flex; flex-direction:column; min-height:220px; text-align:center;}
+    .card .media{height:160px; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center; font-size:60px; color:white;}
+    .card .media i {font-size: 60px; color: white}
+    .card .content{padding:14px; display:flex;flex-direction:column;gap:8px}
+    .meta{display:flex;justify-content:space-between;align-items:center}
+    .title{font-weight:600}
+    .desc{color:var(--muted);font-size:13px}
+    .status{padding:6px 8px;border-radius:999px;font-size:12px}
+    .status.finished{background:rgba(79,70,229,0.12); color:var(--accent);border:1px solid rgba(79,70,229,0.12)}
+    .status.ongoing{background:rgba(245,158,11,0.08); color:#f59e0b; border:1px solid rgba(245,158,11,0.06)}
+    .card .actions{display:flex;gap:10px;margin-top:auto;justify-content:center}
+    .link-btn{display:inline-block;padding:8px 10px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,0.04);background:linear-gradient(180deg,rgba(255,255,255,0.01),rgba(0,0,0,0.02));}
+    footer{margin-top:26px;color:var(--muted);font-size:13px;display:flex;justify-content:space-between;align-items:center}
+    .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:60}
+    .modal .box{max-width:94%;max-height:90%;border-radius:12px;overflow:hidden}
+    .modal img{display:block;max-width:100%;max-height:100%}
+    .social-icons {display: flex;gap: 10px;font-size: 20px;}
+    .social-icons a {color: var(--muted);transition: color 0.2s;}
+    .social-icons a:hover {color: var(--accent);}
+    @media (max-width:1000px){ .grid{grid-template-columns:repeat(2,1fr)} }
+    @media (max-width:640px){ body{padding:18px} header{flex-direction:column;align-items:flex-start;gap:12px} .grid{grid-template-columns:1fr} .logo .hex{width:44px;height:44px} }
+  </style>
 </head>
 <body>
-<header><h1>Project of Tom Wilhem</h1></header>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div class="hex">TW</div>
+        <div>
+          <div class="social-icons">
+            <a href="https://www.instagram.com/w.tommy_05/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+          </div>
+          <h1>Portfolio — Projets</h1>
+          <p class="lead">Projets terminés et en cours de Tom Wilhem</p>
+        </div>
+      </div>
+      <div class="controls">
+        <input class="search" id="search" placeholder="Rechercher un projet..." />
+        <div class="toggle">
+          <button class="btn" data-filter="all">Tous</button>
+          <button class="btn" data-filter="finished">Terminés</button>
+          <button class="btn" data-filter="ongoing">En cours</button>
+        </div>
+      </div>
+    </header>
 
-<p>Who am i</p>
-<section class="image-container-SocialM">
-    <div class="image-wrapper">
-        <a href="./Portfolio/Français-index.html">
-            <img src="./image/CorpsHumain.jpg" alt="Image 1" class="rounded-image">
-            <div class="overlay">Portfolio</div>
-        </a>
-    </div>
-    <div class="image-wrapper">
-        <a href="https://www.instagram.com/w.tommy_05/">
-            <img src="./Presentation/image/Instagram.png" alt="Image 2" class="rounded-imageSocial">
-            <div class="overlay">Instagram</div>
-        </a>
-    </div>
-    <div class="image-wrapper">
-        <a href="">
-            <img src="./Presentation/image/Facebook.png" alt="Image 2" class="rounded-imageSocial">
-            <div class="overlay">Facebook</div>
-        </a>
-    </div>
-    <div class="image-wrapper">
-        <a href="">
-            <img src="./Presentation/image/Gmail.png" alt="Image 2" class="rounded-imageSocial">
-            <div class="overlay">Gmail Pro</div>
-        </a>
-    </div>
-</section>
+    <h2>Projets</h2>
+    <main>
+      <section id="projects" class="grid">
+        <article class="card" data-status="finished" data-title="Echecs Game">
+          <div class="media" style="background-image:url('Presentation/image/Chess.png')"></div>
+          <div class="content">
+            <div class="meta">
+              <div>
+                <div class="title">Echecs Game</div>
+                <div class="desc">Jeu d’échecs — projet terminé</div>
+              </div>
+              <div class="status finished">Terminé</div>
+            </div>
+            <div class="actions">
+              <a class="link-btn" href="https://twilhem.github.io/Presentation/Chess/echecs.html" target="_blank">Voir</a>
+              <button class="link-btn" data-open="Presentation/image/Chess.png">Aperçu</button>
+            </div>
+          </div>
+        </article>
 
-<p>Finished Project</p>
-<section class="image-container-Completed"> 
-    <div class="image-wrapper">
-        <a href="https://twilhem.github.io/Presentation/Chess/echecs.html">
-            <img src="./Presentation/image/Chess.png" alt="Image 3" class="rounded-image">
-            <div class="overlay">Echecs Game</div>
-        </a>
-    </div>
-    <div class="image-wrapper">
-        <a href="https://twilhem.github.io/Cours_RT/">
-            <img src="./Presentation/image/CoursPage.png" alt="Image 4" class="rounded-image">
-            <div class="overlay">R&T Work</div>
-        </a>
-    </div>
-    <div class="image-wrapper">
-        <a href="https://twilhem.github.io/Api-Parking/">
-            <img src="./Presentation/image/Parking.png" alt="Image 5" class="rounded-image">
-            <div class="overlay">SAE Parking</div>
-        </a>
-    </div>
-</section>
+        <article class="card" data-status="finished" data-title="R&T Work">
+          <div class="media" style="background-image:url('Presentation/image/CoursPage.png')"></div>
+          <div class="content">
+            <div class="meta">
+              <div>
+                <div class="title">R&T Work</div>
+                <div class="desc">Travaux réalisés en Réseaux & Télécom</div>
+              </div>
+              <div class="status finished">Terminé</div>
+            </div>
+            <div class="actions">
+              <a class="link-btn" href="https://twilhem.github.io/Cours_RT/" target="_blank">Voir</a>
+              <button class="link-btn" data-open="Presentation/image/CoursPage.png">Aperçu</button>
+            </div>
+          </div>
+        </article>
 
-<p>Project on work</p>
-<section class="image-container-NCompleted">
-    <div class="image-wrapper">
-        <a href="https://twilhem.github.io/Presentation/LoRaWan/">
-            <img src="./Presentation/image/LoRaWan.jpeg" alt="Image 6" class="rounded-image">
-            <div class="overlay">LoRaWan</div>
-        </a>
-    </div>
-</section>
+        <article class="card" data-status="finished" data-title="SAE Parking">
+          <div class="media" style="background-image:url('Presentation/image/Parking.png')"></div>
+          <div class="content">
+            <div class="meta">
+              <div>
+                <div class="title">SAE Parking</div>
+                <div class="desc">API de gestion de parking</div>
+              </div>
+              <div class="status finished">Terminé</div>
+            </div>
+            <div class="actions">
+              <a class="link-btn" href="https://twilhem.github.io/Api-Parking/" target="_blank">Voir</a>
+              <button class="link-btn" data-open="Presentation/image/Parking.png">Aperçu</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-status="ongoing" data-title="LoRaWan">
+          <div class="media" style="background-image:url('Presentation/image/LoRaWan.jpeg')"></div>
+          <div class="content">
+            <div class="meta">
+              <div>
+                <div class="title">LoRaWan</div>
+                <div class="desc">Projet IoT en cours</div>
+              </div>
+              <div class="status ongoing">En cours</div>
+            </div>
+            <div class="actions">
+              <a class="link-btn" href="https://twilhem.github.io/Presentation/LoRaWan/" target="_blank">Voir</a>
+              <button class="link-btn" data-open="Presentation/image/LoRaWan.jpeg">Aperçu</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-status="ongoing" data-title="Plugin LoRaWan">
+          <div class="media" style="background-image:url('Presentation/image/Plugin.png')"></div>
+          <div class="content">
+            <div class="meta">
+              <div>
+                <div class="title">Plugin LoRaWan</div>
+                <div class="desc">Développement d'un plugin — en cours</div>
+              </div>
+              <div class="status ongoing">En cours</div>
+            </div>
+            <div class="actions">
+              <a class="link-btn" href="https://github.com/TWilhem/Plugin" target="_blank">Voir</a>
+              <button class="link-btn" data-open="Presentation/image/Plugin.png">Aperçu</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="modal" id="modal">
+        <div class="box"><img id="modal-img" alt="Aperçu du projet" /></div>
+      </div>
+    </main>
+
+    <footer>
+      <div>© Tom Wilhem</div>
+    </footer>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    const grid = document.getElementById('projects');
+    const cards = Array.from(grid.querySelectorAll('.card'));
+    const search = document.getElementById('search');
+
+    function applyFilter(type){
+      cards.forEach(c=>{
+        const status = c.dataset.status;
+        c.style.display = (type==='all' || status===type) ? 'flex' : 'none';
+      })
+    }
+    buttons.forEach(b=>b.addEventListener('click', ()=> applyFilter(b.dataset.filter)))
+
+    search.addEventListener('input', e=>{
+      const q = e.target.value.toLowerCase();
+      cards.forEach(c=>{
+        const title = c.dataset.title.toLowerCase();
+        const desc = c.querySelector('.desc')?.textContent.toLowerCase() || '';
+        c.style.display = (title.includes(q) || desc.includes(q)) ? 'flex' : 'none';
+      })
+    })
+
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    document.querySelectorAll('[data-open]').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        modalImg.src = btn.dataset.open; modal.style.display='flex';
+      })
+    })
+    modal.addEventListener('click', ()=>{ modal.style.display='none'; modalImg.src=''; })
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') { modal.style.display='none'; modalImg.src='' } })
+  </script>
 </body>
 </html>
