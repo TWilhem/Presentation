@@ -34,6 +34,20 @@
       "status": "ongoing",
       "background": "Presentation/image/Plugin.png",
       "link": "https://github.com/TWilhem/Plugin"
+    },
+    {
+      "title": "Hackaton 2025",
+      "desc": "Projet d'equipe fait au hackaton 2025 a Béziers",
+      "status": "finished",
+      "background": "Presentation/image/Hackaton2025.jpeg",
+      "link": "https://github.com/TWilhem/Hackathon"
+    },
+    {
+      "title": "SAE PHP",
+      "desc": "Projet d'ecole visant a recrée moodle avec php et mysql",
+      "status": "finished",
+      "background": "Presentation/image/Moodle.png",
+      "link": "https://github.com/TWilhem/Moodle-2.0"
     }
   ]
 }
