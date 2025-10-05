@@ -44,7 +44,7 @@
     },
     {
       "title": "SAE PHP",
-      "desc": "Projet d'ecole visant a recrée moodle avec php et mysql",
+      "desc": "Projet d'école visant a recrée moodle avec php et mysql",
       "status": "finished",
       "background": "Presentation/image/Moodle.png",
       "link": "https://github.com/TWilhem/Moodle-2.0"
