@@ -5,49 +5,56 @@
       "desc": "Jeu d’échecs",
       "status": "finished",
       "background": "Presentation/image/Chess.png",
-      "link": "https://twilhem.github.io/Presentation/Chess/echecs.html"
+      "homepage": "https://twilhem.github.io/Presentation/Chess/echecs.html",
+      "Github": ""
     },
     {
       "title": "R&T Work",
       "desc": "Travaux réalisés en Réseaux & Télécom",
       "status": "finished",
       "background": "Presentation/image/CoursPage.png",
-      "link": "https://twilhem.github.io/Cours_RT/"
+      "homepage": "https://twilhem.github.io/Cours_RT/",
+      "Github": ""
     },
     {
       "title": "SAE Parking",
       "desc": "API de gestion de place de parking a Montpellier",
       "status": "finished",
       "background": "Presentation/image/Parking.png",
-      "link": "https://twilhem.github.io/Api-Parking/"
+      "homepage": "https://twilhem.github.io/Api-Parking/",
+      "Github": "https://github.com/TWilhem/Api-Parking"
     },
     {
       "title": "LoRaWan",
       "desc": "Projet IoT",
       "status": "ongoing",
       "background": "Presentation/image/LoRaWan.jpeg",
-      "link": "https://twilhem.github.io/Presentation/LoRaWan/"
+      "homepage": "",
+      "Github": "https://twilhem.github.io/Presentation/LoRaWan/"
     },
     {
       "title": "Plugin",
       "desc": "Développement de plugin Debian",
       "status": "ongoing",
       "background": "Presentation/image/Plugin.png",
-      "link": "https://github.com/TWilhem/Plugin"
+      "homepage": "",
+      "Github": "https://github.com/TWilhem/Plugin"
     },
     {
       "title": "Hackaton 2025",
       "desc": "Projet d'equipe fait au hackaton 2025 a Béziers",
       "status": "finished",
       "background": "Presentation/image/Hackaton2025.jpeg",
-      "link": "https://github.com/TWilhem/Hackathon"
+      "homepage": "",
+      "Github": "https://github.com/TWilhem/Hackathon"
     },
     {
       "title": "SAE PHP",
       "desc": "Projet d'école visant a recrée moodle avec php et mysql",
       "status": "finished",
       "background": "Presentation/image/Moodle.png",
-      "link": "https://github.com/TWilhem/Moodle-2.0"
+      "homepage": "",
+      "Github": "https://github.com/TWilhem/Moodle-2.0"
     }
   ]
 }
