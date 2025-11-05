@@ -64,6 +64,14 @@
       article.dataset.status = projet.status;
       article.dataset.title = projet.title;
 
+      let actions = '';
+      if (projet.Github !== "") {
+        actions += `<a class="link-btn" href="${projet.Github}" target="_blank">Github</a>`;
+      }
+      if (projet.homepage !== "") {
+        actions += `<a class="link-btn" href="${projet.homepage}" target="_blank">Homepage</a>`;
+      }
+
       article.innerHTML = `
         <div class="media" style="background-image:url('${projet.background}')"></div>
         <div class="content">
@@ -75,8 +83,7 @@
             <div class="status ${projet.status}">${projet.status === 'finished' ? 'Terminé' : 'En cours'}</div>
           </div>
           <div class="actions">
-            <a class="link-btn" href="${projet.Github}" target="_blank">Github</a>
-            <a class="link-btn" href="${projet.homepage}" target="_blank">Homepage</a>
+            ${actions}
           </div>
         </div>
       `;
