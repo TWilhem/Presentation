@@ -25,14 +25,6 @@
       "Github": "https://github.com/TWilhem/Api-Parking"
     },
     {
-      "title": "LoRaWan",
-      "desc": "Projet IoT",
-      "status": "ongoing",
-      "background": "Presentation/image/LoRaWan.jpeg",
-      "homepage": "",
-      "Github": "https://twilhem.github.io/Presentation/LoRaWan/"
-    },
-    {
       "title": "Plugin",
       "desc": "Développement de plugin Debian",
       "status": "ongoing",
@@ -55,6 +47,14 @@
       "background": "Presentation/image/Moodle.png",
       "homepage": "",
       "Github": "https://github.com/TWilhem/Moodle-2.0"
+    },
+    {
+      "title": "Go TUI",
+      "desc": "Projet de creation d'un TUI avec go",
+      "status": "ongoing",
+      "background": "Presentation/image/GoTUI.png",
+      "homepage": "",
+      "Github": "https://github.com/TWilhem/GoTUI"
     }
   ]
 }
