@@ -1,1 +1,4 @@
-Perso/
+CV/*
+!CV/Latex/
+CV/Latex/*
+!CV/Latex/main.pdf
